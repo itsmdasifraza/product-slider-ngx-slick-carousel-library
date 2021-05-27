@@ -1,0 +1,97 @@
+::ng-deep :root{
+	--item-size: 180px;
+}
+a{
+    text-decoration: none;
+    outline: none;
+}
+.carousel-main{
+    margin: 0 50px;
+}
+/* loader hr line */
+.loader-line{
+	width: 200px;
+	background-color: yellow;
+	height: 8px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+/* loader hr line */
+
+/* desktop-carousel */
+.item{
+	width: var(--item-size);
+	border: 1px solid rgb(230, 230, 230);
+	box-shadow: 
+	0 1px 2px rgba(0,0,0,0.06), 
+	0 2px 4px rgba(0,0,0,0.06), 
+	0 4px 5px rgba(0,0,0,0.06);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background-color: white;
+	margin-right: 0;
+	margin-left: 16px;
+}
+.item .image{
+	padding: 15px;
+	overflow: hidden !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: calc(var(--item-size) );
+	height: calc(var(--item-size) );
+}
+.item .image img{
+	transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-ms-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+	max-height: calc( var(--item-size) -  (2 * 15px));  /*width - 1st padding -2nd padding*2*/
+	max-width: calc( var(--item-size) - (2 * 15px));  /*width - 1st padding -2nd padding*2*/
+}
+.item:hover .image img{
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+}
+.item .data{
+	width: var(--item-size);
+	height:50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.item .data h6{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word; 
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 853px){
+  	.mobile-no-padding{
+    	padding-left: 0 !important;
+    	padding-right: 0 !important;
+  	}
+    .carousel-main{
+        margin:0;
+    }
+    .title{
+        padding:0 16px;
+    }
+}

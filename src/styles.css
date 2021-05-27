@@ -1,1 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(253, 253, 253);
+}
+
+/* ngx slick carousel library customization */
+.nav-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 50% ;
+    background-color: yellow;
+    height: 30px;
+    width: 30px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+  
+  .prev-slide.slick-disabled,
+  .next-slide.slick-disabled {
+    pointer-events: none;
+    opacity: 0.2;
+  }
+  
+  .prev-slide {
+   
+    left: 10px;
+    z-index: 6;
+  }
+  .prev-slide::before{
+      transform-origin: center center ;
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%) rotate(-35deg);
+      height: 6%;
+      width: 30%;
+      background-color: black;
+      z-index: 9;
+      -webkit-transform: translateX(-50%) rotate(-35deg);
+      -moz-transform: translateX(-50%) rotate(-35deg);
+      -ms-transform: translateX(-50%) rotate(-35deg);
+      -o-transform: translateX(-50%) rotate(-35deg);
+}
+.prev-slide::after{
+      content: "";
+      transform-origin: center center ;
+      position: absolute;
+      bottom: 40%;
+      left: 50%;
+      transform: translateX(-50%) rotate(35deg);
+      height: 6%;
+      width: 30%;
+      background-color: black;
+      z-index: 9;
+      -webkit-transform: translateX(-50%) rotate(35deg);
+      -moz-transform: translateX(-50%) rotate(35deg);
+      -ms-transform: translateX(-50%) rotate(35deg);
+      -o-transform: translateX(-50%) rotate(35deg);
+}
+  
+  .next-slide {
+   
+    right: 10px;
+  }
+  .next-slide::before{
+    content: "";
+    transform-origin: center center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) rotate(35deg);
+    height: 6%;
+    width: 30%;
+    background-color: black;
+    z-index: 9;
+    -webkit-transform: translateX(-50%) rotate(35deg);
+    -moz-transform: translateX(-50%) rotate(35deg);
+    -ms-transform: translateX(-50%) rotate(35deg);
+    -o-transform: translateX(-50%) rotate(35deg);
+}
+.next-slide::after{
+    content: "";
+    position: absolute;
+    transform-origin: center center;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-35deg);
+    height: 6%;
+    width: 30%;
+    background-color: black;
+    z-index: 9;
+    -webkit-transform: translateX(-50%) rotate(-35deg);
+    -moz-transform: translateX(-50%) rotate(-35deg);
+    -ms-transform: translateX(-50%) rotate(-35deg);
+    -o-transform: translateX(-50%) rotate(-35deg);
+}
+  
+  .prev-slide:hover {
+    background-position: 0px -53px;
+  }
+  
+  .next-slide:hover {
+    background-position: -24px -53px;
+  }
+/* ngx slick carousel library customization */
